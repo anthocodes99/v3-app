@@ -6,7 +6,11 @@
 Inspired by Theo's t3-app.
 
 - [x] Add tailwindcss
-- [ ] Add Drizzle
-- [ ] Add `@vercel/postgres`
-- [ ] Add Zod
+- [x] Add Drizzle
+- [x] Add Zod
+- [x] Add postgres
 - [ ] Add tRPC
+
+- [x] add schema
+- [x] add endpoints
+- [ ] add typesafe environment variables
