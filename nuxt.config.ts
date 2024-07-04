@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ["@nuxtjs/tailwindcss"],
   // do `pnpm dev` if typescript error
   // tailwindcss does not exist in type InputConfig<NuxtConfig>
   tailwindcss: {
@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     exposeConfig: true,
     viewer: true,
   },
+  css: ["~/assets/css/main.css"],
   build: {
-    transpile: ['trpc-nuxt']
-  }
-})
+    transpile: ["trpc-nuxt"],
+  },
+});
