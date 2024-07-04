@@ -8,5 +8,8 @@ export default defineNuxtConfig({
     // https://tailwindcss.nuxtjs.org/getting-started/configuration
     exposeConfig: true,
     viewer: true,
+  },
+  build: {
+    transpile: ['trpc-nuxt']
   }
 })
