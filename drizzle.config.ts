@@ -9,4 +9,5 @@ export default defineConfig({
   dbCredentials: {
     url: z.string().parse(process.env.DATABASE_URL),
   },
+  tablesFilter: ['v3-app_*']
 });
