@@ -9,6 +9,7 @@ import {
   serial,
   timestamp,
   varchar,
+  text,
 } from "drizzle-orm/pg-core";
 
 /**
@@ -23,13 +24,12 @@ export const posts = createTable(
   "post",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 256 }),
+    name: varchar("name", { length: 256 }).notNull(),
+    text: text("text").notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
-      .default(sql`CURRENT_TIMESTAMP`)
-      .notNull(),
-    updatedAt: timestamp("updatedAt", { withTimezone: true }),
+      .default(sql`CURRENT_TIMESTAMP`),
   },
-  (example) => ({
-    nameIndex: index("name_idx").on(example.name),
+  (post) => ({
+    nameIndex: index("post_name_idx").on(post.name),
   })
 );
